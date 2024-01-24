@@ -1,11 +1,12 @@
-import { OutputOptions, OutputAsset, OutputChunk, Plugin } from 'rollup';
+import path from 'node:path';
+import { OutputOptions, OutputAsset, OutputChunk, OutputPlugin } from 'rollup';
 
 import { Config } from './types';
 
 export default function bundleManifest({
   output,
   name = 'bundle-manifest.json',
-}: Config): Plugin {
+}: Config): OutputPlugin {
   const bundleManifest: Record<string, object> = {};
 
   return {
@@ -31,13 +32,14 @@ export default function bundleManifest({
       const outputDir = output || options.dir;
 
       if (!outputDir) {
-        throw new Error(
+        this.warn(
           "Couldn't find output directory, please make sure to set it in your config"
         );
+        return;
       }
 
       this.emitFile({
-        fileName: name,
+        fileName: path.resolve(outputDir, name),
         type: 'asset',
         source: JSON.stringify(bundleManifest, undefined, 2),
       });
