@@ -1,6 +1,6 @@
 {
   "name": "rollup-plugin-bundle-manifest",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A rollup plugin to generate a manifest file for the bundle.",
   "main": "./lib/index.mjs",
   "type": "module",
