@@ -23,6 +23,9 @@
   "author": "cchaonie",
   "license": "MIT",
   "devDependencies": {
-    "ava": "^6.1.0"
+    "ava": "^6.1.0",
+    "postcss": "^8.4.33",
+    "rollup": "^4.9.6",
+    "rollup-plugin-postcss": "^4.0.2"
   }
 }
