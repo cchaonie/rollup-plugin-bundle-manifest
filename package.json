@@ -28,5 +28,12 @@
     "postcss": "^8.4.33",
     "rollup": "^4.9.6",
     "rollup-plugin-postcss": "^4.0.2"
+  },
+  "c8": {
+    "reporter": [
+      "lcov",
+      "text"
+    ],
+    "reportsDir": "./coverage"
   }
 }
