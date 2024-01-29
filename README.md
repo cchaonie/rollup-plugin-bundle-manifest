@@ -1,5 +1,7 @@
 # rollup-plugin-bundle-manifest
 
+[![codecov](https://codecov.io/gh/cchaonie/rollup-plugin-bundle-manifest/graph/badge.svg?token=8OPRV3XE0X)](https://codecov.io/gh/cchaonie/rollup-plugin-bundle-manifest)
+
 A rollup plugin to generate a manifest file for the bundle.
 
 ## Why
